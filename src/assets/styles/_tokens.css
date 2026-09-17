@@ -1,0 +1,23 @@
+:root {
+  /* Colors */
+  --color-primary: #d87d4a;
+  --color-primary-light: #fbaf85;
+
+  --color-black: #000000;
+  --color-black-light: #101010;
+
+  --color-white: #ffffff;
+
+  --color-gray: #f1f1f1;
+  --color-gray-light: #fafafa;
+
+  /* Typography */
+  --font-family: 'Manrope', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 40px;
+}
