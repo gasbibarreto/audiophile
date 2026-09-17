@@ -1,2 +1,4 @@
+import type { ImageSet } from "./Image"
+
 export type Category = 'earphones' | 'headphones' | 'speakers'
-export type CategoryBreakpoint = 'mobile'| 'tablet' | 'desktop'
+export type CategoryBreakpoint = ImageSet
