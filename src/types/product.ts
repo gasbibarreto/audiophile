@@ -1,25 +1,25 @@
-import type { Category, CategoryBreakpoint } from "./Category"
-import type { Breakpoint, Gallery, ImageSet } from "./Image"
+import type { Category, CategoryBreakpoint } from './category'
+import type { Gallery, ImageSet } from './image'
 
 export interface Product {
   id: number
   slug: string
   name: string
-  image: Breakpoint
+  image: ImageSet
   category: Category
   categoryImage: CategoryBreakpoint
   new: boolean
   price: number
   description: string
   features: string
-  includes: Array<{
+  includes: {
     quantity: number
     item: string
-  }>
+  }[]
   gallery: Gallery
-  others: Array<{
+  others: {
     slug: string
     name: string
     image: ImageSet
-  }>
+  }[]
 }

@@ -1,4 +1,4 @@
-export type Breakpoint = 'mobile'| 'tablet' | 'desktop'
+export type Breakpoint = 'mobile' | 'tablet' | 'desktop'
 
 export type ImageSet = Record<Breakpoint, string>
 
