@@ -34,7 +34,7 @@ const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1024px)')
           <RouterLink
             class="header__menu-link"
             :to="item.link"
-            @click.prevent="paginaAtual = item.link; isOpen = false"
+            @click.prevent="((paginaAtual = item.link), (isOpen = false))"
           >
             {{ item.nome }}
           </RouterLink>
@@ -43,19 +43,7 @@ const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1024px)')
 
       <img class="header__logo" src="../assets/audiophile.png" alt="Audiophile logo image" />
 
-      <nav v-if="!isTablet && !isMobile" class="header__menu" aria-label="Navegação principal">
-        <ul class="header__menu-list">
-          <li v-for="item in menuItems" :key="item.id" class="header__menu-item">
-            <RouterLink
-              class="header__menu-link"
-              :to="item.link"
-              @click.prevent="paginaAtual = item.link"
-            >
-              {{ item.nome }}
-            </RouterLink>
-          </li>
-        </ul>
-      </nav>
+      <Menu v-if="!isTablet && !isMobile"></Menu>
 
       <img class="header__cart" src="../assets/cart.png" alt="Cart" />
     </div>
@@ -63,7 +51,6 @@ const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1024px)')
     <hr class="header__divider" />
   </header>
 </template>
-
 <style scoped lang="less">
 .header__component {
   background-color: var(--color-black);
@@ -116,25 +103,6 @@ const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1024px)')
   display: block;
   width: 143px;
   height: 25px;
-}
-
-.header__menu {
-  display: flex;
-  justify-content: center;
-}
-
-.header__menu-list {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 34px;
-  margin: 0;
-  padding: 0;
-}
-
-.header__menu-item {
-  display: flex;
-  align-items: center;
 }
 
 .header__menu-link {
