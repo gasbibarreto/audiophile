@@ -31,9 +31,8 @@ import Menu from './Menu.vue'
     justify-content: center;
     flex-direction: column;
     height: 400px;
+    width: min(1110px, calc(100% - 100px));
     margin: 0 auto;
-    padding: 16px;
-    width: min(1110px, calc(100% - 40px));
 
     img {
       margin-bottom: 16px;
@@ -56,27 +55,27 @@ import Menu from './Menu.vue'
     &-media{
         display: flex;
         gap: 12px;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
     }
   }
 }
 
 @media (min-width: 768px) {
   .footer__component__content {
-    display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    width: min(850px, calc(100% - 40px));
-    margin: 0 auto;
   }
 }
 
 @media (min-width: 1440px) {
   .footer__component__content {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: min(1110px, calc(100% - 40px));
   }
 }
 </style>
